@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <title>Form</title>
+</head>
+<body>
+<form method="post" action="">
+    <fieldset>
+        <legend>Registration form</legend>
+        <label for="firstname">Enter firstname</label>
+        <input type="text" name="firstname" required placeholder="e.g smith">
+        <br>
+        
+        <label for="lastname">Enter lastname</label>    
+        <input type="text" name="lastname" required placeholder="e.g john">
+        <br>
+
+        <label for="email">Enter email</label>
+        <input type="email" name="email" required placeholder="Johnsmith@example.com">
+        <br>
+
+        <label for="telephone">Enter Phone Number</label>
+        <input type="tel" name="telephone" required placeholder="+234....">
+        <br>
+
+        <label for="password">Enter password</label>
+        <input type="password" name="password" required minlength="8">
+        <br>
+
+        <label for="passport">upload passport</label>
+        <input type="file" name="passport" accept="image/jpg, png">
+        <br>
+
+        <label for="location">Select your location</label>
+        <select name="location">
+            <option value="none">choose city</option>
+            <option value="abuja">Abuja</option>
+            <option value="ikeja">Ikeja</option>
+
+        </select>
+        <br>
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+    </fieldset>
+</form>
+</body>
+</html>

@@ -31,6 +31,7 @@
         <input type="checkbox" name="hobbies" value="swimming"> Swimming
         <input type="checkbox" name="hobbies" value="drawing"> Drawing
         <br>
+        
 
         <!-- Multi line input-->
         <label for="message">Message</label>
@@ -38,5 +39,40 @@
 
          <input value="submit" type="submit">
         <br>
+        <!--select-->
+        <label for="account_type">Select your Account type</label>
+        <select name="account_type">
+            <option value="player">Player</option>
+             <option value="musician">Musician</option>
+              <option value="driver">Driver</option>
+               <option value="singer">Singer</option>
+                <option value="architect">Architect</option>
+        </select>
+        <br>
+        <!--Date and time-->
+        <label for="start_date">Enter the date you resumed</label>
+        <input type="date" name="start_date">
+
+        <label for="start_month">Enter the month you resumed</label>
+        <input type="month" name="start_month">
+
+        <label for="registered_date">Enter registered date</label>
+        <input type="datetime" name="registered_date">
+        <br>
+
+        <!--colour picker-->
+        <label for="jersey_color">Pick jersey Color</label>
+        <input type="color"   name="jersey_color">
+        <br>
+
+        <!--range-->
+        <label for="rating"> Rate our Performance</label>
+        <input type="range" name="rating" min="0" max="5"/>
+        <br>
+
+        <!--other tags-->
+        <input type="email" name="email">
+        <input type="number" name="number">
+        <input type="tel" name="telephone">
     </body>
 </html>
