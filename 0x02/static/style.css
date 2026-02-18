@@ -1,47 +1,55 @@
 body{
     font-family: Arial;
-    margin: 2em auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    font-size: 14px;
+    background-color: #e1e1e1;
+    margin: 20% 40%;
 }
 
 
 form{
-    min-width: 300px;
-    max-width: 350px;
-    border: 1px solid #eee;
-    border-radius: 5px;
+    border-radius: 10px;
+    background-color: #666;
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
     gap: 10px;
-    
-    
 }
+
+
+@media screen and (width >= 600px) {
+    body{
+        margin: 10px 20px;
+    }
+
+}
+
 
 .form-group{
-    width: 100%;
-    
-}
-.form-group input{
-    border-radius: 5px;
-    border: 1px solid #eee;
-    outline: none;
-    cursor: pointer;
-    background-color: #f1f1f1;
-    padding: 10px 20px;
     display: flex;
-    align-items: baseline;
+    flex-direction: column;
+    width: 100%;
+}
 
+label{
+    text-align: left;
+    color: white;
+    text-transform: capitalize;
+    font-size: 16px;
+}
+input{
+    cursor: text;
+    color: black;
+    padding: 7px 14px;
+    border: 1px solid #999;
+    outline: none;
+    border-radius: 15px;
 }
 button{
-    background-color: green;
-    color: white;
-    padding: 10px 20px;
-    display: flex;
-    align-items: baseline;
-
-    
-}
-button :hover{
-    color: aqua;
+    background-color:blue;
     cursor: pointer;
+    padding: 10px 20px;
+    border-radius: 10px;
+    color: white;
+    outline: none;
+    border: none;
 }
