@@ -2,8 +2,8 @@
 
     {% block content %}
         <form action="http://127.0.0.1:5000/signup" method="post">
-            {% if %}
-                <p>{res['message']}</p>
+            {% if data.message != "" %}
+                <p>{{ data['message'] }}</p>
             {% endif %}
             <div class="form-group">
                 <label for="username">Username</label>

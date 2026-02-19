@@ -1,6 +1,9 @@
     {% include 'base.html' %}
     {% block content %}
-        <form action="#" method="post">
+        <form action="http://127.0.0.1:5000/login" method="post">
+             {% if data.message != "" %}
+                <p>{{ data['message'] }}</p>
+            {% endif %}
             <div class="form-group">
                 <label for="username">Username</label>
                 <input type="text" name="username" placeholder="Enter username" id="username">
