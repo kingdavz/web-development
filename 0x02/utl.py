@@ -41,3 +41,18 @@ def verification(**kwargs):
         return False
     except FileNotFoundError:
         return False
+    
+def change(**kwargs):
+    """A function that changes the password in a file"""
+    try:
+        with open("students.csv", "r", encoding= "utf-8 ") as f:
+            reader = csv.DictReader(f)
+            for row in reader:
+            
+                if row['Username'] == kwargs['Username']:
+                    return True
+        return False
+    except FileNotFoundError:
+        return False
+
+    
