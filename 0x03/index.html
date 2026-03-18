@@ -4,10 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Visitor counter</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-    
+    <main class="app">
+        <section class="class" aria-label="Simple counter app">
+            <p class="class">Current Count</p>
+            <h1 class="count" id="count">0</h1>
+            <div class="actions">
+                <button id="decrease" class="btn btn-decrease" type="button">- Decrease</button>
+                <button id="reset" class="btn btn-reset" type="button">Reset</button>
+                <button id="increase" class="btn btn-increase" type="button">+ Increase</button>
+                <button id="save" class="btn btn-save" type="button">Save</button>
+            </div>
+        </section>
+        <ul id="saved-counts" class="saved-counts">
+            
+        </ul>
+    </main>    
 
 
     <script src="assets/js/scripts.js"></script>

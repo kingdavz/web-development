@@ -1,32 +1,44 @@
-let i
-let x
+const countElement = document.getElementById("count")
+const decreaseButton = document.getElementById("decrease")
+const resetButton = document.getElementById("reset")
+const increaseButton = document.getElementById("increase")
+const saveButton = document.getElementById("save")
+const display = document.getElementById("saved-counts")
+let count = 0
 
-const e = 1
-const name = "david"
-const price = 100.0
-const amount = 500
-
-var j // global in scope
-
-console.log(typeof(e))
-console.log(typeof(name))
-console.log(typeof(price))
-console.log(typeof(amount))
-
-let fullName = "DAvid uzoma"
-let firstName = "David "
-let lastName = "uzoma"
-
-
-console.log(firstName + " " +  lastName)
-console.log(`${firstName} ${lastName}`)
-
-fullName = prompt("what is your name?")
-alert(`Hello ${fullName}`)
-const response = confirm("Are you sure you want to continue?")
-
-if (response) {
-    alert("Thank you")
-} else {
-    alert("bye")
+function updateCounter() {
+    countElement.textContent = count
+    countElement.style.color = count > 0 ?"#10b981" : count < 0 ?"#f97316" : "#1e2433"
 }
+
+decreaseButton.addEventListener("click",function(){
+    count -= 1
+    updateCounter()
+})
+
+resetButton.addEventListener("click", function(){
+    count = 0
+    updateCounter()
+})
+
+increaseButton.addEventListener("click", function(){
+    count += 1
+    updateCounter()
+})
+
+saveButton.addEventListener("click", function(){
+ 
+    if (count == 0){
+        return;
+    }
+    const list = document.createElement('li')
+    list.textContent = count
+    display.append(list)
+   
+    
+    count = 0
+    updateCounter()
+})
+
+
+updateCounter()
