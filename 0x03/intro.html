@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>introduction to javascript</title>
+</head>
+<body>
+    <h1>Elderflower</h1>
+    <div id="content">
+        <div id="greeting" class="message">Hello!</div>
+            <table>
+                <tr>
+                    <td>Custom sign: </td>
+                    <td id="userSign" ></td>
+                </tr>
+                <tr>
+                    <td>Total tiles:</td>
+                    <td id="tiles"></td>
+                </tr>
+                <tr>
+                    <td>Subtotal:</td>
+                    <td id="subtotal">$</td>
+                </tr>
+                <tr>
+                    <td>Shipping</td>
+                    <td id="shipping">$</td>
+                </tr>
+                <tr>
+                    <td>Grand total:</td>
+                    <td id="grandtotal">$</td>
+                </tr>
+            </table>
+    </div>
+
+
+
+    <script>
+        let today = new Date()
+        const hour = today.getHours()
+        let greetings = document.getElementById('greeting')
+
+        if (hour > 18){
+            greetings.textContent += 'Good evening'
+        }else if(hour > 12) {
+            greetings.textContent += 'Good afternoon'
+        }else if (hour > 0){
+            greetings.textContent += 'Good Morning'
+        }else{
+            greetings.textContent = 'Welcome'
+        }
+
+        document.write(greetings.textContent)
+
+    </script>
+
+</body>
+</html>
