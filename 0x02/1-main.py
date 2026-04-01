@@ -1,14 +1,68 @@
 #!/usr/bin/python
 """an entry point to flask app"""
-from flask import Flask, render_template, request, redirect, url_for
-from utl import read_students, write_student, verification, get_student, update_password
+from flask import Flask, render_template, request, redirect, url_for, session
+from utl import (read_students, write_student, verification, get_student, update_password,get_all_blogs,get_blog_by_id,create_blog,
+                delete_blog, get_blogs_by_author)
 
 app = Flask(__name__)
+app.secret_key = "blogspace-secret-key-2026"
 
 
 @app.route("/", methods=["GET"], strict_slashes=False)
 def index():
-    return "Hello World"
+    blogs = get_all_blogs()
+    return render_template("index.html", blogs=blogs)
+
+
+@app.route("/blog/<int:blog_id>", methods=["GET"], strict_slashes=False)
+def view_blog(blog_id):
+    blog = get_blog_by_id(blog_id)
+    if blog is None:
+        return redirect(url_for("index"))
+    return render_template("blog.html", blog=blog)
+
+
+@app.route("/dashboard", methods=["GET","POST"], strict_slashes=False)
+def dashboard():
+    if "username" not in session:
+        return redirect(url_for(login))
+
+    username = session["username"]
+    res = {}
+
+    if request.method == "POST":
+        action = request.form.get("action", "")
+
+        if action  == "create":
+            title = request.form.get("title", "").strip()
+            content = request.form.get("content", "").strip()
+            if not title or not content:
+                res["message"] = "Title and content are required"
+                res["type"] = "error"
+            else:
+                create_blog(title, content, username)
+                res["message"] = "Blog post published successfully"
+                res["type"] = "success"
+
+        elif action == "delete":
+            blog_id = request.form.get("blog_id", "")
+            if delete_blog(blog_id, username):
+                res["message"] = "Post deleted"
+                res["type"] = "success"
+            else:
+                res["message"] = "Could not delete that post."
+                res["type"] = "error"
+
+    my_blogs = get_blogs_by_author(username)
+    return render_template("dashboard.html", data=res, blogs=my_blogs, username=username)
+
+@app.route("/logout", methods=["GET"], strict_slashes=False)
+def logout():
+    session.clear()
+    return redirect(url_for("index"))
+
+
+
 
 @app.route("/login", methods=[ "POST", "GET"], strict_slashes=False)
 def login():
@@ -21,8 +75,8 @@ def login():
             res["message"] = "Username and password required."
             res["type"] = "error"
         elif read_students(username, password):
-            res["message"] = "Login sucessful! Welcome, {}.".format(username)
-            res["type"] = "success"
+            session["username"] = username
+            return redirect(url_for("dashboard"))
         else:
             res["message"] = "Invalid username or password."
             res["type"] = "error"

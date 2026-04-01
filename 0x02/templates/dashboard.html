@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="dashboard-container">
+    <aside class="dashboard-sidebar">
+        <div class="sidebar-avatar">{{ username[0]|upper }}</div>
+        <p class="sidebar-username">{{ username }}</p>
+        <nav class="sidebar-nav">
+            <a href="#new-post" class="sidebar-link active">New post</a>
+            <a href="#my-posts" class="sidebar-link">My Posts</a>
+            <a href="{{ url_for('index')}}" class="sidebar-link">View Feed</a>
+            <a href="{{url_for('logout')}}" class=" sidebar-link"> log out</a>
+        </nav>
+    </aside>
+
+    <div class="dashoard-main">
+
+        <section class="dash-card" id="new-post">
+            <h2 class="dash-card-title">Create a new post</h2>
+            {% if data.message %}
+                <p class="msg {{ data.type }}">{{  data.message}}</p>
+            {% endif %}
+            <form action="{{ url_for('dashboard')}}" method="post" class="dash-form">
+                <input type="hidden" name="action" value="create">
+                <div class="form-group">
+                    <label for="title">Post Title</label>
+                    <input type="text" name="title" id="title"
+                        placeholder="Give your post a catchy title" required>
+                </div>
+                <div class="form-group">
+                    <label for="content">Content</label>
+                    <textarea name="content" id="content" rows="8"
+                        placeholder="Write your post here..." required></textarea>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn-publish">Publish Post</button>
+                </div>
+            </form>
+        </section>
+
+        <section class="dash-card" id="my-posts">
+            <h2 class="dash-card-title">My Posts <span class="badge">{{ blogs|length}}</span></h2>
+            {% if blogs %}
+                <div class="post-list">
+                    {% for blog in blogs %}
+                    <div class="post-list-item">
+                        <div class="post-list-info">
+                            <a href="{{ url_for('view_blog', blog_id=blog.id) }}" class="post-list-title">
+                                {{blog.title}}
+                            </a>
+                            <span class="post-list-date">{{ blog.created_at[:10] }}</span>
+                        </div>
+                        <form action="{{ url_for('dashoard')}}" method="post" class="delete-form">
+                            <input type="hidden" name="actiotn" value="delete">
+                            <input type="hidden" name="blog_id" value="{{ blog.id}}">
+                            <button type="submit" class="btn-delete"
+                                onclick="return confirm(('delete this post'))">Delete</button>
+                        </form>
+                    </div>
+                    {% endfor %}
+                </div>
+            {% else %}
+            <p class="empty-posts"> You haven't written anything yet.Use the form above to publish your first past!</p>
+            {% endif %}
+        </section>
+    </div>
+</div>
+{% endblock %}

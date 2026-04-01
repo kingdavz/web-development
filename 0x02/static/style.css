@@ -106,3 +106,392 @@ button:hover{
     color: #721c24;
     border: 1px solid #f5c6cb;
 }
+
+.navbar{
+    background-color: #1a1a2e;
+    padding: 0 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 56px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.25)
+}
+
+.nav-brand{
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #e94560;
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+.nav-links{
+    display: flex;
+    gap: 1.4rem;
+    align-items: center;
+}
+.nav-links a{
+    color: #ccc;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.2s;
+}
+
+.nav-links a:hover{
+    color: #fff;
+}
+
+.page-container{
+    max-width: 960px;
+    margin: 2.5rem auto;
+    padding: 0 1.5rem;
+}
+.page-header{
+    margin-bottom: 2rem;
+}
+
+.page-header h1{
+    font-size: 2rem;
+    margin: 0 0 0.3rem;
+    color: #1a1a2e;
+}
+.subtitle{
+    color: #666;
+    margin: 0;
+}
+
+.blog-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.blog-card{
+    background: #fff;
+    border-radius: 10px;
+    box-shadow:  0 2px 8px rgba(0,0,0,0.07);
+    display: flex;
+    flex-direction: column;
+    transition: box-shadow 0.2s;
+    overflow:hidden;
+}
+
+.blog-card:hover{
+    box-shadow: 0 6px 18px rgba(0,0,0,0.13);
+
+}
+
+.blog-card body{
+    padding: 1.2rem 1.4rem;
+    flex: 1;
+}
+
+.blog-title {
+    font-size: 1.05rem;
+    margin:  0 0 0.6rem;
+}
+
+.blog-title a{
+    color: #1a1a2e;
+    text-decoration: none;
+}
+.blog-title a:hover{
+    color: #e94560;
+}
+.blog-excerpt{
+    font-size: 0.86rem;
+    color: #666;
+    line-height: 1.55;
+    margin: 0;
+}
+
+.blog-card-footer{
+    padding: 0.75rem 1.4rem;
+    border-top: 1px solid #f0f0f0 ;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fafafa;
+}
+
+
+.blog-author{
+    font-size: 0.82rem;
+    color: #e94560;
+    font-weight: 600;
+}
+
+
+.blog-date{
+    font-size: 0.78rem;
+    color:#999;
+}
+.empty-state{
+    text-align: center;
+    padding: 4rem 2rem;
+    color: #888;
+}
+
+.empty-state a{
+    color: #e94560;
+}
+
+
+.post-container{
+    max-width: 760px;
+    margin: 2.5rem auto;
+    padding: 0 1.5rem;
+}
+
+
+.back-link{
+    display: inline-block;
+    margin-bottom: 1.2rem;
+    color: #4a90e2;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.back-link:hover{
+    text-decoration: underline;
+}
+.post-full{
+    background: #fff;
+    border-radius: 10px;
+    padding: 2rem 2.5rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+}
+
+.post-full-title{
+    font-size: 1.8rem;
+    margin: 0 0 0.6rem;
+    color: #1a1a2e;
+}
+
+.post-full-meta{
+    display: flex;
+    gap: 1.2rem;
+    margin-bottom: 1.5rem;
+    font-size: 0.85rem;
+}
+
+.post-full-content{
+    line-height: 1.75;
+    color: #444;
+    white-space: pre-wrap;
+    word-break: break-word;
+}
+
+
+.dashboard-container{
+    max-width: 1100px;
+    margin: 2.5rem auto;
+    padding: 0 1.5rem;
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+}
+
+
+.dashboard-sidebar{
+    width: 220px;
+    flex-shrink: 0;
+    background: #1a1a2e;
+    border-radius: 12px;
+    padding: 1.8rem 1.2rem;
+    color: #fff;
+    text-align: center;
+    position: sticky;
+    top: 74px;
+}
+
+.sidebar-avatar{
+    width: 60px;
+    height: 60px;
+    background: #e94560;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0 auto 0.7rem;
+}
+
+
+.sidebar-username{
+    font-size: 0.95rem;
+    font-weight: 600;
+    margin: 0 0 1.4rem;
+    color: #ddd;
+}
+
+.sidear-nav{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.sidebar-link{
+    display: block;
+    padding: 0.55rem 0.9rem;
+    border-radius: 6px;
+    color: #bbb;
+    text-decoration: none;
+    font-size: 0.88rem;
+    transition: background 0.2s, color 0.2s;
+}
+
+.sidebar-link:hover,
+.sidebar-link.active{
+    background-color: rgba(233,69,96,0.2);
+    color: #e94560;
+}
+
+
+.dashboard-main{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap:1.8rem
+}
+
+
+.dash-card{
+    background: #fff;
+    border-radius: 10px;
+    padding: 1.8rem 2rem;
+    box-shadow:  0 2px 8px rgba(0,0,0,0.07);
+}
+
+.dash-card-title{
+    font-size: 1.2rem;
+    margin: 0 0 1.2rem;
+    color: #1a1a2e;
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+}
+
+.badge{
+    background: #e94560;
+    color: #fff;
+    border-radius: 12px;
+    padding: 1px 10px;
+    font-size: 0.8rem;
+
+}
+
+.dash-form{
+    min-width: unset;
+    max-width: unset;
+    border: none;
+    border-radius: 0;
+    padding: 0;
+    box-shadow: none;
+    margin:0;
+}
+
+.dash-form textarea{
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px 14px;
+    font-size: 0.95rem;
+    font-family: Arial,sans-serif;
+    resize: vertical;
+    outline: none;
+    background: #fff;
+}
+
+.dash-form textarea:focus{
+    border-color: #4a90e2;
+    background: #fff;
+}
+
+.btn-publish{
+    background-color: #e94560;
+    width: unset;
+    padding: 10px 28px;
+    font-size: 0.95rem;
+}
+
+.btn-publish:hover{
+    background-color: #e94560;
+}
+
+.post-list{
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.post-list-item{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.85rem 1rem;
+    border: 1px solid #eee;
+    border-radius: 7px;
+    background: #fafafa;
+    transition: background 0.15s;
+}
+
+.post-list-item:hover{
+    background: #f0f4ff;
+}
+
+.post-list-info{
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+.post-list-title{
+    font-size: 0.95rem;
+    color: #1a1a2e;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.post-list-title:hover{
+    color: #e94560;
+}
+
+.post-list-date{
+    font-size: 0.78rem;
+    color: #999;
+}
+
+.delete-form{
+    min-width: unset;
+    max-width: unset;
+    border: none;
+    padding: 0;
+    box-shadow: none;
+    margin: 0;
+    background: transparent;
+    flex-direction: row;
+}
+
+.btn-delete{
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 6px 14px;
+    font-size: 0.83rem;
+    cursor: pointer;
+    width:auto;
+}
+
+.btn-delete:hover{
+    background-color: #b02a37;
+}
+
+.empty-posts{
+    color: #888;
+    font-size: 0.9rem;
+}
