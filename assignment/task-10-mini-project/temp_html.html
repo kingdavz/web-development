@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Davinci — Frontend Developer & UI/UX Enthusiast. Building beautiful, performant web applications." />
+    <meta property="og:title" content="Davinci | Frontend Developer" />
+    <meta property="og:description" content="A portfolio of Frontend Developer Davinci — crafting fast, beautiful and accessible web apps." />
+    <title>Davinci | Frontend Developer</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+    <link rel="stylesheet" href="/style.css" />
+</head>
+
+<body>
+
+    <!-- ===== NAVIGATION ===== -->
+    <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
+        <div class="container nav-inner">
+            <a href="#hero" class="nav-logo">Davinci<span>.</span></a>
+
+            <ul class="nav-links" role="list">
+                <li><a href="#hero" class="nav-link active">Home</a></li>
+                <li><a href="#services" class="nav-link">Services</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+
+            <a href="#contact" class="nav-cta">Hire Me</a>
+
+            <button class="nav-hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+        </div>
+    </nav>
+
+    <!-- Mobile nav drawer -->
+    <div class="mobile-nav" id="mobile-nav" role="navigation" aria-label="Mobile navigation">
+        <a href="#hero" class="mobile-nav-link active">Home</a>
+        <a href="#services" class="mobile-nav-link">Services</a>
+        <a href="#projects" class="mobile-nav-link">Projects</a>
+        <a href="#about" class="mobile-nav-link">About</a>
+        <a href="#contact" class="mobile-nav-link">Contact</a>
+    </div>
+
+    <main>
+        <!-- ===== HERO SECTION ===== -->
+        <section id="hero">
+            <div class="hero-bg-grid" aria-hidden="true"></div>
+            <div class="hero-bg-glow" aria-hidden="true"></div>
+            <div class="container" style="position:relative; display:flex; align-items:center; width:100%; gap:2rem; flex-wrap:wrap;">
+                <div class="hero-content">
+                    <div class="hero-greeting">
+                        <span class="dot" aria-hidden="true"></span> Available for freelance work
+                    </div>
+
+                    <h1 class="hero-title">
+                        Hi, I am
+                        <span class="name">Davinci</span>
+                    </h1>
+
+                    <p class="hero-bio">
+                        A talented <strong><span id="typed-role" class="accent"></span><span class="accent" style="border-right:2px solid var(--color-accent); animation: blink 1s step-end infinite;">&nbsp;</span></strong><br> I build fast, accessible
+                        and visually compelling digital experiences that users love and clients trust. Let's create something amazing.
+                    </p>
+
+                    <div class="hero-actions">
+                        <a href="#projects" class="btn-primary">
+                            <i class="fa fa-briefcase" aria-hidden="true"></i> View Projects
+                        </a>
+                        <a href="#contact" class="btn-secondary">
+                            <i class="fa fa-paper-plane" aria-hidden="true"></i> Get In Touch
+                        </a>
+                    </div>
+
+                    <div class="hero-socials" role="list" aria-label="Social links">
+                        <a href="https://github.com" target="_blank" rel="noopener noreferrer" aria-label="GitHub" role="listitem">
+                            <i class="fab fa-github" aria-hidden="true"></i>
+                        </a>
+                        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" role="listitem">
+                            <i class="fab fa-linkedin-in" aria-hidden="true"></i>
+                        </a>
+                        <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter" role="listitem">
+                            <i class="fab fa-twitter" aria-hidden="true"></i>
+                        </a>
+                        <a href="https://dribbble.com" target="_blank" rel="noopener noreferrer" aria-label="Dribbble" role="listitem">
+                            <i class="fab fa-dribbble" aria-hidden="true"></i>
+                        </a>
+                        <a href="mailto:daniel@example.com" aria-label="Email" role="listitem">
+                            <i class="fa fa-envelope" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Stats -->
+                <aside class="hero-stats" aria-label="Career statistics">
+                    <div class="stat-card">
+                        <div class="stat-number" data-count="3" aria-label="3 years of experience">3+</div>
+                        <div class="stat-label">Years<br>Experience</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" data-count="20" aria-label="20 projects completed">20+</div>
+                        <div class="stat-label">Projects<br>Completed</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" data-count="15" aria-label="15 happy clients">15+</div>
+                        <div class="stat-label">Happy<br>Clients</div>
+                    </div>
+                </aside>
+            </div>
+        </section>
+
+        <!-- ===== WHAT I DO / SERVICES SECTION ===== -->
+        <section id="services">
+            <div class="container">
+                <p class="section-label fade-up">What I do</p>
+                <h2 class="section-title fade-up">Crafting Digital <span class="accent">Experiences</span></h2>
+                <p class="section-subtitle fade-up">
+                    From pixel-perfect UIs to robust full-stack systems — I turn complex problems into elegant, performant solutions.
+                </p>
+
+                <div class="services-grid">
+                    <article class="service-card fade-up">
+                        <div class="service-icon" aria-hidden="true">🎨</div>
+                        <h3 class="service-title">UI / UX Design</h3>
+                        <p class="service-desc">
+                            Creating intuitive, visually compelling interfaces grounded in user research and design systems thinking. Every pixel purposeful.
+                        </p>
+                    </article>
+
+                    <article class="service-card fade-up">
+                        <div class="service-icon" aria-hidden="true">⚡</div>
+                        <h3 class="service-title">Frontend Development</h3>
+                        <p class="service-desc">
+                            Building high-performance, responsive web apps using React, TypeScript, and modern tooling. Fast, accessible, and maintainable by default.
+                        </p>
+                    </article>
+
+                    <article class="service-card fade-up">
+                        <div class="service-icon" aria-hidden="true">🛠️</div>
+                        <h3 class="service-title">Full Stack Apps</h3>
+                        <p class="service-desc">
+                            End-to-end development — from REST APIs and databases to polished frontends. Your entire product, shipped with care.
+                        </p>
+                    </article>
+
+                    <article class="service-card fade-up">
+                        <div class="service-icon" aria-hidden="true">✍️</div>
+                        <h3 class="service-title">Content Writing</h3>
+                        <p class="service-desc">
+                            Technical writing, documentation, and developer-focused content that communicates complex ideas with clarity and precision.
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== FEATURED PROJECTS ===== -->
+        <section id="projects">
+            <div class="container">
+                <div class="projects-header">
+                    <div>
+                        <p class="section-label fade-up">Featured Projects</p>
+                        <h2 class="section-title fade-up">Things I've <span class="accent">Built</span></h2>
+                    </div>
+                    <a href="#" class="view-all-link fade-up">
+            View all work <i class="fa fa-arrow-right" aria-hidden="true"></i>
+          </a>
+                </div>
+
+                <div class="projects-grid">
+                    <article class="project-card fade-up">
+                        <div class="project-img-wrap">
+                            <div class="project-img-placeholder" aria-label="Project preview">🗂️</div>
+                            <div class="project-img-overlay">
+                                <a href="#" class="overlay-btn-demo" target="_blank" rel="noopener noreferrer">
+                                    <i class="fa fa-external-link-alt" aria-hidden="true"></i> Live Demo
+                                </a>
+                                <a href="https://github.com" class="overlay-btn-code" target="_blank" rel="noopener noreferrer">
+                                    <i class="fab fa-github" aria-hidden="true"></i> Code
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-body">
+                            <div class="project-tags">
+                                <span class="tag">React</span>
+                                <span class="tag">TypeScript</span>
+                                <span class="tag">Tailwind</span>
+                            </div>
+                            <h3 class="project-title">Task Manager Pro</h3>
+                            <p class="project-desc">A modern project management tool with drag-and-drop Kanban boards, real-time collaboration, and team analytics.</p>
+                        </div>
+                    </article>
+
+                    <article class="project-card fade-up">
+                        <div class="project-img-wrap">
+                            <div class="project-img-placeholder" aria-label="Project preview">📊</div>
+                            <div class="project-img-overlay">
+                                <a href="#" class="overlay-btn-demo" target="_blank" rel="noopener noreferrer">
+                                    <i class="fa fa-external-link-alt" aria-hidden="true"></i> Live Demo
+                                </a>
+                                <a href="https://github.com" class="overlay-btn-code" target="_blank" rel="noopener noreferrer">
+                                    <i class="fab fa-github" aria-hidden="true"></i> Code
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-body">
+                            <div class="project-tags">
+                                <span class="tag">Next.js</span>
+                                <span class="tag">Node.js</span>
+                                <span class="tag">PostgreSQL</span>
+                            </div>
+                            <h3 class="project-title">Analytics Dashboard</h3>
+                            <p class="project-desc">A full-stack analytics dashboard with live data visualization, customizable widgets, and role-based access control.</p>
+                        </div>
+                    </article>
+
+                    <article class="project-card fade-up">
+                        <div class="project-img-wrap">
+                            <div class="project-img-placeholder" aria-label="Project preview">🛒</div>
+                            <div class="project-img-overlay">
+                                <a href="#" class="overlay-btn-demo" target="_blank" rel="noopener noreferrer">
+                                    <i class="fa fa-external-link-alt" aria-hidden="true"></i> Live Demo
+                                </a>
+                                <a href="https://github.com" class="overlay-btn-code" target="_blank" rel="noopener noreferrer">
+                                    <i class="fab fa-github" aria-hidden="true"></i> Code
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-body">
+                            <div class="project-tags">
+                                <span class="tag">React</span>
+                                <span class="tag">Redux</span>
+                                <span class="tag">Stripe</span>
+                            </div>
+                            <h3 class="project-title">E-Commerce Platform</h3>
+                            <p class="project-desc">A feature-rich e-commerce platform with cart management, payment integration, inventory tracking, and admin panel.</p>
+                        </div>
+                    </article>
+
+                    <article class="project-card fade-up">
+                        <div class="project-img-wrap">
+                            <div class="project-img-placeholder" aria-label="Project preview">💬</div>
+                            <div class="project-img-overlay">
+                                <a href="#" class="overlay-btn-demo" target="_blank" rel="noopener noreferrer">
+                                    <i class="fa fa-external-link-alt" aria-hidden="true"></i> Live Demo
+                                </a>
+                                <a href="https://github.com" class="overlay-btn-code" target="_blank" rel="noopener noreferrer">
+                                    <i class="fab fa-github" aria-hidden="true"></i> Code
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-body">
+                            <div class="project-tags">
+                                <span class="tag">React</span>
+                                <span class="tag">Socket.io</span>
+                                <span class="tag">Express</span>
+                            </div>
+                            <h3 class="project-title">Real-Time Chat App</h3>
+                            <p class="project-desc">Real-time messaging app with group chats, file sharing, read receipts, and end-to-end encrypted conversations.</p>
+                        </div>
+                    </article>
+
+                    <article class="project-card fade-up">
+                        <div class="project-img-wrap">
+                            <div class="project-img-placeholder" aria-label="Project preview">🎵</div>
+                            <div class="project-img-overlay">
+                                <a href="#" class="overlay-btn-demo" target="_blank" rel="noopener noreferrer">
+                                    <i class="fa fa-external-link-alt" aria-hidden="true"></i> Live Demo
+                                </a>
+                                <a href="https://github.com" class="overlay-btn-code" target="_blank" rel="noopener noreferrer">
+                                    <i class="fab fa-github" aria-hidden="true"></i> Code
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-body">
+                            <div class="project-tags">
+                                <span class="tag">React</span>
+                                <span class="tag">Spotify API</span>
+                                <span class="tag">CSS</span>
+                            </div>
+                            <h3 class="project-title">Music Player App</h3>
+                            <p class="project-desc">A beautiful Spotify-connected music player with playlist management, visualizer, and mood-based recommendations.</p>
+                        </div>
+                    </article>
+
+                    <article class="project-card fade-up">
+                        <div class="project-img-wrap">
+                            <div class="project-img-placeholder" aria-label="Project preview">🌐</div>
+                            <div class="project-img-overlay">
+                                <a href="#" class="overlay-btn-demo" target="_blank" rel="noopener noreferrer">
+                                    <i class="fa fa-external-link-alt" aria-hidden="true"></i> Live Demo
+                                </a>
+                                <a href="https://github.com" class="overlay-btn-code" target="_blank" rel="noopener noreferrer">
+                                    <i class="fab fa-github" aria-hidden="true"></i> Code
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-body">
+                            <div class="project-tags">
+                                <span class="tag">Vue.js</span>
+                                <span class="tag">Firebase</span>
+                                <span class="tag">PWA</span>
+                            </div>
+                            <h3 class="project-title">Travel Planner PWA</h3>
+                            <p class="project-desc">A progressive web app for travel planning with offline support, trip itineraries, and collaborative sharing features.</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== ABOUT SECTION ===== -->
+        <section id="about">
+            <div class="container">
+                <div class="about-inner">
+                    <div class="about-img-wrap fade-up">
+                        <div class="about-img-frame">
+                            <img src="/about.png" alt="Daniel Ochi — Frontend Developer" loading="lazy" />
+                        </div>
+                        <div class="about-img-accent" aria-hidden="true"></div>
+                        <div class="experience-badge">
+                            <span class="number">3+</span>
+                            <span class="text">Years of<br>Experience</span>
+                        </div>
+                    </div>
+
+                    <div class="about-text">
+                        <p class="section-label fade-up">About me</p>
+                        <h2 class="section-title fade-up">Passionate About <span class="accent">Crafting</span> Digital Solutions</h2>
+
+                        <p class="fade-up">
+                            I'm a Frontend Developer with over three years of hands-on experience building responsive web applications and intuitive user interfaces. I specialize in turning designs into pixel-perfect, high-performance code.
+                        </p>
+                        <p class="fade-up">
+                            Currently focused on React and TypeScript ecosystems, I enjoy working on projects that challenge me technically while creating real value for end users. I care deeply about accessibility, performance, and maintainable architecture.
+                        </p>
+                        <p class="fade-up">
+                            When not coding, you'll find me exploring new tech, contributing to open source, or writing technical articles that help other developers level up.
+                        </p>
+
+                        <p class="skills-label fade-up">Core Skills</p>
+                        <div class="skills-grid fade-up">
+                            <span class="skill-item">React / Next.js</span>
+                            <span class="skill-item">TypeScript</span>
+                            <span class="skill-item">Node.js / Express</span>
+                            <span class="skill-item">CSS / Tailwind CSS</span>
+                            <span class="skill-item">PostgreSQL / MongoDB</span>
+                            <span class="skill-item">REST / GraphQL APIs</span>
+                            <span class="skill-item">Git &amp; CI/CD</span>
+                            <span class="skill-item">Testing (Jest/Cypress)</span>
+                        </div>
+
+                        <p class="skills-label fade-up">Tech Stack</p>
+                        <div class="tech-stack fade-up">
+                            <span class="tech-badge"><i class="fab fa-react" aria-hidden="true"></i> React</span>
+                            <span class="tech-badge">TS</span>
+                            <span class="tech-badge"><i class="fab fa-node-js" aria-hidden="true"></i> Node</span>
+                            <span class="tech-badge">Tailwind</span>
+                            <span class="tech-badge"><i class="fab fa-git-alt" aria-hidden="true"></i> Git</span>
+                            <span class="tech-badge">Figma</span>
+                            <span class="tech-badge"><i class="fab fa-docker" aria-hidden="true"></i> Docker</span>
+                            <span class="tech-badge">PostgreSQL</span>
+                        </div>
+
+                        <div style="margin-top: var(--spacing-lg);" class="fade-up">
+                            <a href="#contact" class="btn-primary" style="display:inline-flex;">
+                                <i class="fa fa-download" aria-hidden="true"></i> Download CV
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== CONTACT SECTION ===== -->
+        <section id="contact">
+            <div class="container">
+                <div style="text-align:center; margin-bottom: var(--spacing-xl);">
+                    <p class="section-label fade-up" style="justify-content:center;">Get In Touch</p>
+                    <h2 class="section-title fade-up">Have a project in mind?<br>Let's <span class="accent">talk</span></h2>
+                    <p class="section-subtitle fade-up" style="margin: 0 auto;">
+                        I'm always open to discussing new opportunities in any environment at any time.
+                    </p>
+                </div>
+
+                <div class="contact-inner">
+                    <aside class="contact-info">
+                        <p class="contact-blurb fade-up">
+                            Whether you have a project idea, want to collaborate, or just want to say hi — my inbox is always open. I'll get back to you within 24 hours.
+                        </p>
+
+                        <div class="contact-details">
+                            <a href="mailto:daniel@example.com" class="contact-item fade-up">
+                                <span class="contact-item-icon" aria-hidden="true">
+                  <i class="fa fa-envelope"></i>
+                </span> daniel@example.com
+                            </a>
+                            <a href="tel:+1234567890" class="contact-item fade-up">
+                                <span class="contact-item-icon" aria-hidden="true">
+                  <i class="fa fa-phone"></i>
+                </span> +1 (234) 567-890
+                            </a>
+                            <a href="#" class="contact-item fade-up">
+                                <span class="contact-item-icon" aria-hidden="true">
+                  <i class="fa fa-map-marker-alt"></i>
+                </span> Lagos, Nigeria
+                            </a>
+                        </div>
+
+                        <div class="hero-socials fade-up" role="list" aria-label="Social links" style="margin-top:0;">
+                            <a href="https://github.com" target="_blank" rel="noopener noreferrer" aria-label="GitHub" role="listitem">
+                                <i class="fab fa-github" aria-hidden="true"></i>
+                            </a>
+                            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" role="listitem">
+                                <i class="fab fa-linkedin-in" aria-hidden="true"></i>
+                            </a>
+                            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter" role="listitem">
+                                <i class="fab fa-twitter" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </aside>
+
+                    <div class="fade-up">
+                        <form class="contact-form" id="contact-form" novalidate>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label class="form-label" for="name">Full Name</label>
+                                    <input class="form-control" id="name" type="text" name="name" placeholder="John Doe" required autocomplete="name" />
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label" for="email">Email Address</label>
+                                    <input class="form-control" id="email" type="email" name="email" placeholder="john@example.com" required autocomplete="email" />
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="subject">Subject</label>
+                                <input class="form-control" id="subject" type="text" name="subject" placeholder="Project Inquiry" required />
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="message">Message</label>
+                                <textarea class="form-control" id="message" name="message" placeholder="Tell me about your project..." required></textarea>
+                            </div>
+                            <button type="submit" class="btn-submit">
+                <i class="fa fa-paper-plane" aria-hidden="true"></i>
+                Send Message
+              </button>
+                        </form>
+                        <div class="form-success" id="form-success" role="alert">
+                            <i class="fa fa-check-circle" style="font-size:2.5rem; margin-bottom:0.75rem; display:block; color:var(--color-accent);"></i> Message sent successfully!<br>
+                            <span style="font-size:0.875rem; color:var(--color-text-secondary); font-weight:400;">I'll get back to you within 24 hours.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+        <div class="container footer-inner">
+            <span class="footer-logo">Daniel<span>.</span></span>
+            <p class="footer-copy">&copy; 2024 Daniel Ochi. Crafted with &hearts;</p>
+            <div class="footer-socials" role="list" aria-label="Social links">
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer" aria-label="GitHub" role="listitem">
+                    <i class="fab fa-github" aria-hidden="true"></i>
+                </a>
+                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" role="listitem">
+                    <i class="fab fa-linkedin-in" aria-hidden="true"></i>
+                </a>
+                <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter" role="listitem">
+                    <i class="fab fa-twitter" aria-hidden="true"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to top button -->
+    <button class="scroll-top" id="scroll-top" aria-label="Scroll to top">
+    <i class="fa fa-arrow-up" aria-hidden="true"></i>
+  </button>
+
+    <style>
+        @keyframes blink {
+            0%,
+            100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0;
+            }
+        }
+    </style>
+
+    <script src="/script.js"></script>
+</body>
+
+</html>

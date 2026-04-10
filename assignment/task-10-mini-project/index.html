@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Davinci | Frontend Developer</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="temp_css.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <header id="header">
+        <nav class="container">
+            <a href="#home" class="logo">Davinci</a>
+            <ul class="nav-links">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#projects" class="nav-link">Featured Projects</a></li>
+                <li><a href="#about" class="nav-link">About Me</a></li>
+                <li><a href="#contact" class="nav-link">Contact Me</a></li>
+            </ul>
+            <a href="#" class="btn btn-primary">View Resume <i class="fa-solid fa-download"></i></a>
+
+            <div class="menu-toggle">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+
+    <section id="hero">
+        <div class="hero-bg-grid" aria-hidden="true"></div>
+        <div class="hero-bg-glow" aria-hidden="true"></div>
+        <div class="container" style="position:relative; display:flex; align-items:center; width:100%; gap:2rem; flex-wrap:wrap;">
+            <div class="hero-content">
+                <div class="hero-greeting">
+                    <span class="dot" aria-hidden="true"></span> Available for freelance work
+                </div>
+
+                <h1 class="hero-title">
+                    Hi, I am
+                    <span class="name">Davinci</span>
+                </h1>
+
+                <p class="hero-bio">
+                    A talented <strong><span id="typed-role" class="accent"></span><span class="accent" style="border-right:2px solid var(--color-accent); animation: blink 1s step-end infinite;">&nbsp;</span></strong><br> I build fast, accessible and
+                    visually compelling digital experiences that users love and clients trust. Let's create something amazing.
+                </p>
+
+                <div class="hero-actions">
+                    <a href="#projects" class="btn-primary">
+                        <i class="fa fa-briefcase" aria-hidden="true"></i> View Projects
+                    </a>
+                    <a href="#contact" class="btn-secondary">
+                        <i class="fa fa-paper-plane" aria-hidden="true"></i> Get In Touch
+                    </a>
+                </div>
+
+                <div class="hero-socials" role="list" aria-label="Social links">
+                    <a href="https://github.com" target="_blank" rel="noopener noreferrer" aria-label="GitHub" role="listitem">
+                        <i class="fab fa-github" aria-hidden="true"></i>
+                    </a>
+                    <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" role="listitem">
+                        <i class="fab fa-linkedin-in" aria-hidden="true"></i>
+                    </a>
+                    <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter" role="listitem">
+                        <i class="fab fa-twitter" aria-hidden="true"></i>
+                    </a>
+                    <a href="https://dribbble.com" target="_blank" rel="noopener noreferrer" aria-label="Dribbble" role="listitem">
+                        <i class="fab fa-dribbble" aria-hidden="true"></i>
+                    </a>
+                    <a href="mailto:daniel@example.com" aria-label="Email" role="listitem">
+                        <i class="fa fa-envelope" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Stats -->
+            <aside class="hero-stats" aria-label="Career statistics">
+                <div class="stat-card">
+                    <div class="stat-number" data-count="3" aria-label="3 years of experience">3+</div>
+                    <div class="stat-label">Years<br>Experience</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" data-count="20" aria-label="20 projects completed">20+</div>
+                    <div class="stat-label">Projects<br>Completed</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" data-count="15" aria-label="15 happy clients">15+</div>
+                    <div class="stat-label">Happy<br>Clients</div>
+                </div>
+            </aside>
+        </div>
+    </section>
+
+
+
+    <section id="services" class="services section-padding">
+        <div class="container">
+            <p class="section-label text-center">SERVICES</p>
+            <h2 class="section-title text-center">What I do.</h2>
+
+            <div class="services-grid">
+                <div class="service-card active-card">
+                    <div class="service-header">
+                        <i class="fa-solid fa-code"></i>
+                        <span class="service-num">01</span>
+                    </div>
+                    <h3>Web Development</h3>
+                    <p>Uses my knowledge of various programming languages and web tools to construct visually appealing and highly functional sites.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-header">
+                        <i class="fa-solid fa-pen-nib"></i>
+                        <span class="service-num">02</span>
+                    </div>
+                    <h3>UI/UX Design</h3>
+                    <p>Crafting user-centric digital experiences that seamlessly blend aesthetics and functionality, built to ensure optimal usage.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-header">
+                        <i class="fa-solid fa-keyboard"></i>
+                        <span class="service-num">03</span>
+                    </div>
+                    <h3>Content Writing</h3>
+                    <p>Sharing impactful narratives and delivering creative content that connects with readers while conveying complex concepts.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="projects section-padding">
+        <div class="container">
+            <p class="section-label text-center">PORTFOLIO</p>
+            <h2 class="section-title text-center">Featured projects.</h2>
+
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-img"></div>
+                    <div class="project-info">
+                        <h3>Danty Vaults</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-img"></div>
+                    <div class="project-info">
+                        <h3>Danty Vaults</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-img"></div>
+                    <div class="project-info">
+                        <h3>Danty Vaults</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-img"></div>
+                    <div class="project-info">
+                        <h3>Danty Vaults</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-img"></div>
+                    <div class="project-info">
+                        <h3>Danty Vaults</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-img"></div>
+                    <div class="project-info">
+                        <h3>Danty Vaults</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about section-padding">
+        <div class="container">
+            <p class="section-label text-center">WHO I AM</p>
+            <h2 class="section-title text-center">About me.</h2>
+
+            <div class="about-grid">
+                <div class="about-image">
+                    <div class="profile-pic-container">
+                        <div class="profile-circle"></div>
+                        <i class="fa-brands fa-html5 tech-icon icon-1"></i>
+                        <i class="fa-brands fa-css3-alt tech-icon icon-2"></i>
+                        <i class="fa-brands fa-js tech-icon icon-3"></i>
+                        <i class="fa-brands fa-react tech-icon icon-4"></i>
+                    </div>
+                </div>
+                <div class="about-text">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et lacus diam imperdiet viverra sed vitae nulla. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
+                    <p>Phasellus finibus posuere velit non iaculis in varius arcu. Donec diam vel lacus interdum, ut suscipit tellus magna amet sollicitudin morbi vestibulum sagittis id in a congue fames dictum tellus fermentum dui quis non.</p>
+                    <p>Nulla ultrices commodo condimentum eu id eu urna. Arcu enim eget erat curabitur pulvinar. Ultrices donec ipsum sit amet nunc leo. Euismod interdum faucibus quis dolor egestas neque ullamcorper semper tellus.</p>
+                    <a href="#" class="btn btn-primary mt-3">View Resume <i class="fa-solid fa-download"></i></a>
+                </div>
+            </div>
+
+            <div class="skills-section mt-5">
+                <div class="skills-grid">
+                    <div class="skills-text">
+                        <p class="section-label">SKILLS</p>
+                        <h2 class="section-title">Technical skills.</h2>
+                        <p>Pellentesque pulvinar vel risus diam. Commodo tincidunt dapibus potenti nullam mi mus nec. Vulputate in id quam vulputate. Mauris id ultrices viverra id cras habitasse id proin hac eleifend adipiscing sagittis. Dui et eu congue
+                            vitae egestas.</p>
+                    </div>
+                    <div class="skills-pills">
+                        <span class="skill-pill">&lt;HTML/&gt;</span>
+                        <span class="skill-pill">JAVASCRIPT</span>
+                        <span class="skill-pill">CSS</span>
+                        <span class="skill-pill">REACT</span>
+                        <span class="skill-pill">TAILWIND</span>
+                        <span class="skill-pill">UI DESIGN</span>
+                        <span class="skill-pill">TYPESCRIPT</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact section-padding">
+        <div class="container text-center mb-5">
+            <p class="section-label">MY DETAILS</p>
+            <h2 class="section-title">Contact me.</h2>
+            <p>I am currently open to full-time, contract or part-time opportunities in<br>Front-End Development.</p>
+        </div>
+
+        <div class="container contact-grid">
+            <div class="contact-info">
+                <h3>Have an awesome project idea? <br> <span class="accent-text">Let's Discuss.</span></h3>
+                <ul class="contact-list">
+                    <li>
+                        <div class="icon-circle"><i class="fa-solid fa-phone"></i></div>
+                        <span>+234 810 248 8778</span>
+                    </li>
+                    <li>
+                        <div class="icon-circle"><i class="fa-solid fa-envelope"></i></div>
+                        <span class="accent-text">daviduzoma2008@gmail.com</span>
+                    </li>
+                    <li>
+                        <div class="icon-circle"><i class="fa-solid fa-location-dot"></i></div>
+                        <span>Abuja, Nigeria</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="contact-form-container">
+                <form class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" placeholder="John Doe">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" placeholder="Email Address">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" rows="4" placeholder="Enter Message"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message <i class="fa-regular fa-paper-plane"></i></button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <style>
+        @keyframes blink {
+            0%,
+            100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0;
+            }
+        }
+    </style>
+
+    <script src="script.js"></script>
+    <script src="temp_js.js"></script>
+</body>
+
+</html>

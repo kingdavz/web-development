@@ -1,0 +1,152 @@
+/* RESET */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* MOBILE FIRST */
+
+body {
+    font-family: Arial, sans-serif;
+    font-size: clamp(0.9rem, 2.5vw, 1rem);
+}
+
+
+/* HEADER */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #222;
+    color: white;
+    padding: 1rem;
+    position: relative;
+}
+
+.logo {
+    font-size: clamp(1.2rem, 4vw, 1.8rem);
+}
+
+
+/* HAMBURGER */
+
+.hamburger {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    cursor: pointer;
+}
+
+.hamburger span {
+    width: 28px;
+    height: 3px;
+    background: white;
+    transition: all 0.3s ease;
+}
+
+
+/* HIDE CHECKBOX */
+
+#menu-toggle {
+    display: none;
+}
+
+
+/* NAV (hidden by default) */
+
+.nav {
+    position: absolute;
+    top: 65px;
+    right: 0;
+    width: 100%;
+    background: #333;
+    display: none;
+    flex-direction: column;
+    text-align: center;
+}
+
+.nav a {
+    padding: 1rem;
+    color: white;
+    text-decoration: none;
+    border-bottom: 1px solid #444;
+}
+
+
+/* SHOW MENU */
+
+#menu-toggle:checked+.hamburger+.nav {
+    display: flex;
+}
+
+
+/* HAMBURGER ANIMATION (turn to X) */
+
+#menu-toggle:checked+.hamburger span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+#menu-toggle:checked+.hamburger span:nth-child(2) {
+    opacity: 0;
+}
+
+#menu-toggle:checked+.hamburger span:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
+}
+
+
+/* CARDS */
+
+.container {
+    padding: 1rem;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+.card {
+    background: #f4f4f4;
+    padding: 2rem;
+    text-align: center;
+    font-size: clamp(1rem, 2vw, 1.3rem);
+    border-radius: 8px;
+}
+
+
+/* TABLET ≥ 480px */
+
+@media (min-width: 480px) {
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+/* DESKTOP ≥ 768px */
+
+@media (min-width: 768px) {
+    .hamburger {
+        display: none;
+    }
+    .nav {
+        position: static;
+        display: flex;
+        flex-direction: row;
+        background: none;
+        width: auto;
+    }
+    .nav a {
+        border: none;
+        padding: 0 1rem;
+    }
+    .cards {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
